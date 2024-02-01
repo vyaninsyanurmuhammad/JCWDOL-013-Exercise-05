@@ -62,3 +62,15 @@ const addElementToEnd = (list, number) => {
 console.log(addElementToEnd([1, 2, 3, 4], 4));
 console.log(addElementToEnd([1, 2, 3, 4], 7));
 
+// 
+// 
+// 
+// Write a function to remove all odd numbers in an array and return a new array that contains even numbers only
+
+const removeAllOddArray = (list) => {
+    const result = list.filter((data) => data % 2 === 0);
+
+    return result;
+}
+
+console.log(removeAllOddArray([1, 2, 3, 4, 5, 6]));
