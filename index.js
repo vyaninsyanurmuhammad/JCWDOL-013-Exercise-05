@@ -39,3 +39,8 @@ const concatenatingWord = (list) => {
 
 console.log(concatenatingWord(["apple", "banana", "cherry", "date"]));
 
+// Write a function to split a string and convert it into an array of words
+
+const convertToArray = (text) => text.split(" ");
+
+console.log(convertToArray("Hello World"));
