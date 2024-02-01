@@ -27,3 +27,15 @@ const lowestAverageHighestWithSort = (list) => {
 
 console.log(lowestAverageHighestWithoutSort([12, 5, 23, 18, 4, 45, 32]));
 console.log(lowestAverageHighestWithSort([12, 5, 23, 18, 4, 45, 32]));
+
+// Write a function that takes an array of words and returns a string by concatenating the words in the array, separated by commas and - the last word - by an 'and'.
+
+const concatenatingWord = (list) => {
+    const listWithoutLastData = list.slice(0, list.length - 1);
+    const lastData = list[list.length - 1];
+
+    return listWithoutLastData.join(",") + ` and ${lastData}`;
+}
+
+console.log(concatenatingWord(["apple", "banana", "cherry", "date"]));
+
