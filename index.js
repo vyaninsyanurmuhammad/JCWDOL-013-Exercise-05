@@ -86,3 +86,10 @@ array can only contain 5 elements).
 const insertToArrayByMaxSize = (max, ...number) => number.slice(0, max);
 
 console.log(insertToArrayByMaxSize(5, 5, 10, 24, 3, 6, 7, 8));
+
+// Write a function that will combine 2 given array into one array
+
+const combineTwoGivenArray = (listA, listB) => [...listA, ...listB];
+
+console.log(combineTwoGivenArray([1, 2, 3], [4, 5, 6]));
+
