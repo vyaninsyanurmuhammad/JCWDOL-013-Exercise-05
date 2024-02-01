@@ -110,3 +110,24 @@ const findDuplicateInArray = (list) => {
 }
 
 console.log(findDuplicateInArray([1, 2, 2, 2, 3, 3, 4, 5, 5]));
+
+// Write a function to find the difference in 2 given array
+
+const findDifferenceTwoGivenArray = (listA, listB) => {
+
+    const combinedList = [...listA, ...listB];
+    const seen = {};
+    let difference = [];
+
+    combinedList.forEach((value) => {
+
+        seen[value] = (seen[value] || 0) + 1;
+
+        if (seen[value] === 1) difference.push(value);
+        if (seen[value] > 1) difference = difference.filter((data) => data !== value);
+    });
+    
+    return difference;
+}
+
+console.log(findDifferenceTwoGivenArray([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]));
