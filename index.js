@@ -18,4 +18,12 @@ const lowestAverageHighestWithoutSort = (list) => {
     return { lowest: list[0], highest: list[list.length - 1], average: list.reduce((total, number) => total + number, 0) / list.length }
 }
 
+// with sort method
+const lowestAverageHighestWithSort = (list) => {
+    list.sort((a, b) => a - b);
+
+    return { lowest: list[0], highest: list[list.length - 1], average: list.reduce((total, number) => total + number, 0) / list.length }
+}
+
 console.log(lowestAverageHighestWithoutSort([12, 5, 23, 18, 4, 45, 32]));
+console.log(lowestAverageHighestWithSort([12, 5, 23, 18, 4, 45, 32]));
