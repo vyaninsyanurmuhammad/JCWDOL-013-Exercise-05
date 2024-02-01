@@ -50,3 +50,15 @@ console.log(convertToArray("Hello World"));
 const calculateEachElement = (listA, listB) => listA.slice().map((data, index) => data + listB[index]);
 
 console.log(calculateEachElement([1, 2, 3], [3, 2, 1]));
+
+// Write a function that adds an element to the end of an array. However, the element should only be added if it is not already in the array.
+
+const addElementToEnd = (list, number) => {
+    if (!list.includes(number)) list.push(number);
+
+    return list;
+}
+
+console.log(addElementToEnd([1, 2, 3, 4], 4));
+console.log(addElementToEnd([1, 2, 3, 4], 7));
+
