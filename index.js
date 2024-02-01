@@ -93,3 +93,20 @@ const combineTwoGivenArray = (listA, listB) => [...listA, ...listB];
 
 console.log(combineTwoGivenArray([1, 2, 3], [4, 5, 6]));
 
+// Write a function to find duplicate values in an array
+
+const findDuplicateInArray = (list) => {
+    const seen = {};
+    const duplicates = [];
+
+    list.forEach((value) => {
+        if (seen[value] === 1) duplicates.push(value);
+
+        seen[value] = (seen[value] || 0) + 1;
+
+    });
+
+    return duplicates;
+}
+
+console.log(findDuplicateInArray([1, 2, 2, 2, 3, 3, 4, 5, 5]));
