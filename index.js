@@ -149,3 +149,17 @@ console.log(filterPrimitives([1, [], undefined, {}, "string", {}, []]));
 const givenSecondSmallestNumber = (list) => list.sort((a, b) => a - b)[1];
 
 console.log(givenSecondSmallestNumber([5, 3, 1, 7, 2, 6]));
+
+// Write a function from a given array of mixed data types and return the sum of all the number
+
+const sumNumbersFromMixedArray = (list) => {
+    let sum = 0;
+
+    list.forEach(data => {
+        if (typeof data === 'number' && !isNaN(data)) sum += data;
+    });
+
+    return sum;
+}
+
+console.log(sumNumbersFromMixedArray(["3", 1, "string", null, false, undefined, 2]));
