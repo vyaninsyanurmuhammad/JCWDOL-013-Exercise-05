@@ -143,3 +143,9 @@ const filterPrimitives = (arr) => {
 };
 
 console.log(filterPrimitives([1, [], undefined, {}, "string", {}, []]));
+
+// Write a function from a given array of numbers and return the second smallest number
+
+const givenSecondSmallestNumber = (list) => list.sort((a, b) => a - b)[1];
+
+console.log(givenSecondSmallestNumber([5, 3, 1, 7, 2, 6]));
