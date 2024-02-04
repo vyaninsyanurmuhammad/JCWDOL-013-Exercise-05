@@ -187,3 +187,28 @@ const sumDuplicateNumberFromArray = (list) => {
 }
 
 console.log(sumDuplicateNumberFromArray([10, 20, 40, 10, 50, 30, 10, 60, 10]));
+
+// Write a game of rock, paper, scissor function that will return 'Win' or 'Lose'. The function will randomly pick between rock, paper, or scissor.
+
+const gameRockPaperScissor = (player) => {
+    const options = ["rock", "paper", "scissor"];
+    let computer = "";
+
+    while (player === computer || computer === "") {
+        computer = options[Math.floor(Math.random() * options.length)];
+    }
+
+    console.log(`${player} x ${computer}`);
+
+    if (
+        (player === "rock" && computer === "scissor") ||
+        (player === "paper" && computer === "rock") ||
+        (player === "scissor" && computer === "paper")
+    ) {
+        return "Win";
+    } else {
+        return "Lose";
+    }
+}
+
+console.log(gameRockPaperScissor("rock"));
