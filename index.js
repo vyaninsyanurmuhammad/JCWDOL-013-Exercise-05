@@ -126,8 +126,20 @@ const findDifferenceTwoGivenArray = (listA, listB) => {
         if (seen[value] === 1) difference.push(value);
         if (seen[value] > 1) difference = difference.filter((data) => data !== value);
     });
-    
+
     return difference;
 }
 
 console.log(findDifferenceTwoGivenArray([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]));
+
+// 
+// 
+// 
+// Based on the array below write a function that will return primitive data types only.
+// let arr = [1, [], undefined, {}, "string", {}, []];
+
+const filterPrimitives = (arr) => {
+    return arr.filter(item => typeof item !== 'object' && typeof item !== 'function');
+};
+
+console.log(filterPrimitives([1, [], undefined, {}, "string", {}, []]));
