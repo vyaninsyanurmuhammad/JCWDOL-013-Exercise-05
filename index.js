@@ -163,3 +163,27 @@ const sumNumbersFromMixedArray = (list) => {
 }
 
 console.log(sumNumbersFromMixedArray(["3", 1, "string", null, false, undefined, 2]));
+
+// Write a function from the below array of number that will return sum of duplicate values.
+
+const sumDuplicateNumberFromArray = (list) => {
+    const seen = {};
+    let maxKey = 0;
+    let maxValue = 0;
+
+    list.forEach((value) => {
+        seen[value] = (seen[value] || 0) + 1;
+
+    });
+
+    for (const key in seen) {
+        if (maxValue === 0 || seen[key] > maxValue) {
+            maxKey = key;
+            maxValue = seen[key];
+        }
+    }
+
+    return maxKey * maxValue;
+}
+
+console.log(sumDuplicateNumberFromArray([10, 20, 40, 10, 50, 30, 10, 60, 10]));
