@@ -53,7 +53,7 @@ const calculateEachElement = (listA, listB) => {
     const result = [];
 
     for (let i = 0; i < listA.length; i++) {
-        result.push(listA[i] + listB[i]);      
+        result.push(listA[i] + listB[i]);
     }
 
     return result;
@@ -80,7 +80,7 @@ console.log(addElementToEnd([1, 2, 3, 4], 7));
 const removeAllOddArray = (list) => {
     // const result = list.filter((data) => data % 2 === 0);
     const result = [];
-    
+
     for (const iterator of list) {
         if (iterator % 2 === 0) result.push(iterator);
     }
@@ -114,12 +114,14 @@ const findDuplicateInArray = (list) => {
     const seen = {};
     const duplicates = [];
 
-    list.forEach((value) => {
+    // list.forEach((value) => {
+    for (let value of list) {
         if (seen[value] === 1) duplicates.push(value);
 
         seen[value] = (seen[value] || 0) + 1;
 
-    });
+    }
+    // });
 
     return duplicates;
 }
