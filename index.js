@@ -51,7 +51,7 @@ console.log(convertToArray("Hello World"));
 
 const calculateEachElement = (listA, listB) => {
     const result = [];
-    
+
     for (let i = 0; i < listA.length; i++) {
         result.push(listA[i] + listB[i]);      
     }
@@ -78,7 +78,12 @@ console.log(addElementToEnd([1, 2, 3, 4], 7));
 // Write a function to remove all odd numbers in an array and return a new array that contains even numbers only
 
 const removeAllOddArray = (list) => {
-    const result = list.filter((data) => data % 2 === 0);
+    // const result = list.filter((data) => data % 2 === 0);
+    const result = [];
+    
+    for (const iterator of list) {
+        if (iterator % 2 === 0) result.push(iterator);
+    }
 
     return result;
 }
