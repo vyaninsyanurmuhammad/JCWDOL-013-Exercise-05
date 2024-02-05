@@ -81,8 +81,20 @@ console.log(calculateEachElement([1, 2, 3], [3, 2, 1]));
 
 // Write a function that adds an element to the end of an array. However, the element should only be added if it is not already in the array.
 
+// const addElementToEnd = (list, number) => {
+//     if (!list.includes(number)) list.push(number);
+
+//     return list;
+// }
+
 const addElementToEnd = (list, number) => {
-    if (!list.includes(number)) list.push(number);
+    let isExist = false;
+
+    for (const data of list) {
+        if (data === number) isExist = true;
+    }
+
+    if (!isExist) list.push(number);
 
     return list;
 }
