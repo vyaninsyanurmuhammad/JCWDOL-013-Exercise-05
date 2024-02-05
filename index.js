@@ -47,7 +47,17 @@ console.log(convertToArray("Hello World"));
 
 // Write a function to calculate each element in the same position from two arrays of integer. Assume both arrays are of the same length.
 
-const calculateEachElement = (listA, listB) => listA.slice().map((data, index) => data + listB[index]);
+// const calculateEachElement = (listA, listB) => listA.slice().map((data, index) => data + listB[index]);
+
+const calculateEachElement = (listA, listB) => {
+    const result = [];
+    
+    for (let i = 0; i < listA.length; i++) {
+        result.push(listA[i] + listB[i]);      
+    }
+
+    return result;
+}
 
 console.log(calculateEachElement([1, 2, 3], [3, 2, 1]));
 
