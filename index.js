@@ -41,7 +41,25 @@ console.log(concatenatingWord(["apple", "banana", "cherry", "date"]));
 
 // Write a function to split a string and convert it into an array of words
 
-const convertToArray = (text) => text.split(" ");
+// const convertToArray = (text) => text.split(" ");
+
+const convertToArray = (text) => {
+    const result = [];
+
+    let output = [];
+
+    for (let i = 0; i < text.length; i++) {
+
+        if (text[i] !== " ") output.push(text[i]);
+
+        if (text[i] === " " || i === (text.length - 1)) {
+            result.push(output.join(''));
+            output = [];
+        }
+    }
+
+    return result;
+}
 
 console.log(convertToArray("Hello World"));
 
